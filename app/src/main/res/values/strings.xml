@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">U7_Proyecto2_DatePickerDialog</string>
+    <string name="medico">Medico</string>
+    <string name="fecha_nac">Fecha Nac</string>
+    <string name="cita">Cita</string>
+    <string name="notif">Notific</string>
+    <string name="notificacion">Mensaje de notificación</string>
 </resources>
