@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
         val c2 = Calendar.getInstance()                                                                             //(1)
         findViewById<Button>(R.id.btnFechaNac).setOnClickListener{                                                  //(2)
-            val dpd = DatePickerDialog(this, { _, year, monthOfYear, dayOfMonth ->                           //(3)
+            val dpd = DatePickerDialog(this, { _ , year , monthOfYear , dayOfMonth ->                           //(3)
                 c[Calendar.YEAR] = year                                                                             //(4)
                 c[Calendar.MONTH] = monthOfYear                                                                     //(5)
                 c[Calendar.DAY_OF_MONTH] = dayOfMonth                                                               //(6)
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
             val channelId = "channelId"                                                                                 //(5)
             val notificationManager = this.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager        //(6)
-            val pendingIntent = PendingIntent.getActivity(this, 0, intent, 0)                    //(4)
+            val pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)                    //(4)
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 val channel = NotificationChannel(channelId, "Channel name", NotificationManager.IMPORTANCE_HIGH) //(7)
